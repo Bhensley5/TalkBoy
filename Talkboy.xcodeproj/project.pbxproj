@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B8D144321F21791000B3A37E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D144311F21791000B3A37E /* AppDelegate.swift */; };
-		B8D144341F21791000B3A37E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D144331F21791000B3A37E /* ViewController.swift */; };
 		B8D144371F21791000B3A37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D144351F21791000B3A37E /* Main.storyboard */; };
 		B8D1443A1F21791000B3A37E /* Talkboy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8D144381F21791000B3A37E /* Talkboy.xcdatamodeld */; };
 		B8D1443C1F21791000B3A37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8D1443B1F21791000B3A37E /* Assets.xcassets */; };
 		B8D1443F1F21791000B3A37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D1443D1F21791000B3A37E /* LaunchScreen.storyboard */; };
+		B8D144491F217B4000B3A37E /* SoundsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D144481F217B4000B3A37E /* SoundsTableViewController.swift */; };
+		B8D1444B1F217B6800B3A37E /* CreateSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D1444A1F217B6800B3A37E /* CreateSoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8D1442E1F21791000B3A37E /* Talkboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talkboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D144311F21791000B3A37E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8D144331F21791000B3A37E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8D144361F21791000B3A37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8D144391F21791000B3A37E /* Talkboy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talkboy.xcdatamodel; sourceTree = "<group>"; };
 		B8D1443B1F21791000B3A37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8D1443E1F21791000B3A37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8D144401F21791000B3A37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8D144481F217B4000B3A37E /* SoundsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsTableViewController.swift; sourceTree = "<group>"; };
+		B8D1444A1F217B6800B3A37E /* CreateSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				B8D144311F21791000B3A37E /* AppDelegate.swift */,
-				B8D144331F21791000B3A37E /* ViewController.swift */,
+				B8D144481F217B4000B3A37E /* SoundsTableViewController.swift */,
+				B8D1444A1F217B6800B3A37E /* CreateSoundViewController.swift */,
 				B8D144351F21791000B3A37E /* Main.storyboard */,
 				B8D1443B1F21791000B3A37E /* Assets.xcassets */,
 				B8D1443D1F21791000B3A37E /* LaunchScreen.storyboard */,
@@ -139,7 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8D1443A1F21791000B3A37E /* Talkboy.xcdatamodeld in Sources */,
-				B8D144341F21791000B3A37E /* ViewController.swift in Sources */,
+				B8D144491F217B4000B3A37E /* SoundsTableViewController.swift in Sources */,
+				B8D1444B1F217B6800B3A37E /* CreateSoundViewController.swift in Sources */,
 				B8D144321F21791000B3A37E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

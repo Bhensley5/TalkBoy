@@ -1,24 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c5F-hW-aOb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Talkboy-->
+        <scene sceneID="wcS-No-4qs">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <tableViewController id="gFD-3E-MpF" customClass="SoundsTableViewController" customModule="Talkboy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s35-tN-Tto">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="zGp-2b-pcd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zGp-2b-pcd" id="ANo-VE-gJD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gFD-3E-MpF" id="4UF-xX-b7E"/>
+                            <outlet property="delegate" destination="gFD-3E-MpF" id="LWk-BZ-Nrk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Talkboy" id="4dH-Zi-Tkp">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="aS1-mM-7VZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xVm-SD-Gau">
+                            <connections>
+                                <segue destination="ylL-TI-1Kc" kind="show" id="g3f-x5-2yw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voq-f1-ePh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="614" y="146"/>
+        </scene>
+        <!--Create Sound View Controller-->
+        <scene sceneID="ghv-To-8Ec">
+            <objects>
+                <viewController id="ylL-TI-1Kc" customClass="CreateSoundViewController" customModule="Talkboy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="cSq-9j-2rR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbv-3w-HkS">
+                                <rect key="frame" x="163" y="82" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordTapped:" destination="ylL-TI-1Kc" eventType="touchUpInside" id="SQj-Wr-O6R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD5-Xi-MY8">
+                                <rect key="frame" x="172.5" y="120" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="ylL-TI-1Kc" eventType="touchUpInside" id="ngc-ce-qFt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sound Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEc-gr-OUG">
+                                <rect key="frame" x="40" y="158" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hd-UV-DYJ">
+                                <rect key="frame" x="172.5" y="196" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="ylL-TI-1Kc" eventType="touchUpInside" id="eQg-1V-U8Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sbv-3w-HkS" firstAttribute="centerX" secondItem="cSq-9j-2rR" secondAttribute="centerX" id="0gF-Vm-jdV"/>
+                            <constraint firstItem="Sbv-3w-HkS" firstAttribute="top" secondItem="Ttp-5S-toc" secondAttribute="top" constant="18" id="1rh-qw-2ar"/>
+                            <constraint firstItem="VEc-gr-OUG" firstAttribute="centerX" secondItem="cSq-9j-2rR" secondAttribute="centerX" id="NMj-fD-TKf"/>
+                            <constraint firstItem="VEc-gr-OUG" firstAttribute="leading" secondItem="Ttp-5S-toc" secondAttribute="leading" constant="40" id="NMt-Dj-zKS"/>
+                            <constraint firstItem="jD5-Xi-MY8" firstAttribute="top" secondItem="Sbv-3w-HkS" secondAttribute="bottom" constant="8" id="PkB-XL-6Ae"/>
+                            <constraint firstItem="7hd-UV-DYJ" firstAttribute="centerX" secondItem="cSq-9j-2rR" secondAttribute="centerX" id="S3s-qN-v7v"/>
+                            <constraint firstItem="7hd-UV-DYJ" firstAttribute="top" secondItem="VEc-gr-OUG" secondAttribute="bottom" constant="8" id="Ucv-dT-Oof"/>
+                            <constraint firstItem="VEc-gr-OUG" firstAttribute="top" secondItem="jD5-Xi-MY8" secondAttribute="bottom" constant="8" id="cWR-Yd-PS6"/>
+                            <constraint firstItem="Ttp-5S-toc" firstAttribute="trailing" secondItem="VEc-gr-OUG" secondAttribute="trailing" constant="40" id="eb7-1J-kwb"/>
+                            <constraint firstItem="jD5-Xi-MY8" firstAttribute="centerX" secondItem="cSq-9j-2rR" secondAttribute="centerX" id="h16-le-gNa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ttp-5S-toc"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="7hd-UV-DYJ" id="Nje-0o-rHD"/>
+                        <outlet property="nameTextField" destination="VEc-gr-OUG" id="tmS-n7-bNR"/>
+                        <outlet property="playButton" destination="jD5-Xi-MY8" id="NIV-MP-TXb"/>
+                        <outlet property="recordButton" destination="Sbv-3w-HkS" id="h1Z-sn-YBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDv-Dy-3d8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382" y="142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vnM-dF-omA">
+            <objects>
+                <navigationController id="c5F-hW-aOb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dY7-hg-tEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gFD-3E-MpF" kind="relationship" relationship="rootViewController" id="F27-LK-AJ5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANM-dA-r3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="146"/>
         </scene>
     </scenes>
 </document>
